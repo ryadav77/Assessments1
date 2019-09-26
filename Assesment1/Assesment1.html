@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0-11/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+<title>BookStore</title>
+</head>
+<body style="background-color: black">
+      
+
+
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div style="text-align: center"  class="modal-header">
+        <h4  class="modal-title">Cart Details </h4>
+      </div>
+      <div class="modal-body">
+            <table class="table table-dark" id="tb1">
+                    <tbody>
+                        <tr>
+                        <td><b>ID</b></td>
+                        <td><b>Book Name</b></td>
+                        <td><b>Qunatity</b></td>
+                        <td><b>Price</b></td>
+                        <td><b>Total Price</b></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <hr>
+                <p id="nob">Number of Books:</p>
+                <p id="tcost">Total Cost:</p>
+                <form>
+                        <div class="form-group">
+                          <label>Customer Name</label>
+                          <input type="text" class="form-control" id="namec" >
+                         </div>
+                        <div class="form-group">
+                          <label>Adress</label>
+                          <input type="text" class="form-control" id="addr">
+                        </div>
+                      
+                        <hr>
+                      
+                      </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary"><b>Buy Now</b></button>  
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+    <!-- navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-dark">
+        <a class="navbar-brand" href="#"><img style="width: 40px;height: 40px ;border-radius: 5px; border:2px solid white; border-style:groove; box-shadow:1px 1px white" src=".\images\logo.jpg"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" style="color: white" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" style="color: white" href="#">Visit Us</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Dropdown
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="color: white" >
+                        <a class="dropdown-item" href="#">Testimonials</a>
+                        <a class="dropdown-item" href="#">Readers Community</a>
+                        <a class="dropdown-item" href="#">Suscribe</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" style="color: white" href="#"></a>
+                </li>
+                <li class="nav-item">
+                    <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Cart</button>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <p style="background-color: black;color:white;font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif">Welcome to Community</p>
+                <br>
+                <p>   </p>
+            </form>
+        </div>
+    </nav>
+    <br>
+    <br>
+
+
+    <div class="container">
+
+        <div class="row">
+            <div class="col-md-3">
+              <div class="card">
+                <img src=".\images\1984.jpg" style="border-style: groove;  height:390px;box-shadow: 5px 5px 5px black" class="card-img-top" alt="">
+                 <div class="card-body">
+                   <h4 class="card-title text-uppercase"> <b>1984 </b> </h4>
+                    <p class="card-text"> By:George Orwell</p>
+                    <p>Price 180</p>
+                    <p>George Orwell's nightmarish vision of a totalitarian, bureaucratic stiff's attempt to find individuality</p>
+                   <a class="btn btn-primary" href="#">Details</a>
+                  
+                 </div>
+                 <div class="card-body">
+                        <button id="b1" type="btn btn-primary">Add to Cart</button>
+                 </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                  <img src=".\images\alchemist.jpg" style="  height:390px;border-style: groove;box-shadow: 5px 5px 5px black" class="card-img-top" alt="">
+                   <div class="card-body">
+                     <h4 class="card-title text-uppercase"><b>The Alchemist</b></h4>
+                      <p class="card-text">By: Paulo Coelho </p>
+                      <p>Price 150</p>
+                      <p>"...Paulo Coelho's enchanting novel has inspired a devoted following around the world". Best Selling </p>
+                     <a class="btn btn-primary" href="#">Details</a>
+                   </div>
+                   <div class="card-body">
+                       <button id="b2" type="btn btn-primary">Add to Cart</button>
+                   </div>
+                </div>
+              </div>
+            <div class="col-md-3">
+              <div class="card">
+                  <img src=".\images\blade.jpg"style=" height:390px; border-style: groove;box-shadow: 5px 5px 5px black" class="card-img-top" alt="">
+                  <div class="card-body">
+                    <h4 class="card-title text-uppercase"><b>Blade Runner</b></h4>
+                    <p>By: Philip K. Dick</p>
+                    <p>Price 450</p>
+                    
+                    <p>Do Androids Dream of Electric Sheep? It was January 2021, and Rick Deckard had a license to kill....</p>
+                    <a class="btn btn-primary">Details</a>
+                  </div>
+                  <div class="card-body">
+                        <button id="b3" type="btn btn-primary">Add to Cart</button>
+                  </div>
+              </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card">
+                <img src=".\images\chess.jpg"style="border-style: groove ; height:390px;box-shadow: 5px 5px 5px black" class="card-img-top" alt="">
+                <div class="card-body">
+                  <h4 class="card-title text-uppercase"><b>Chess Story</b></h4>
+                  <p class="card-text">By: Stefan Zweig</p>
+                  <p>Price 300</p>
+                  <p>Only story in which Zweig looks at Nazism. Chess Story, also known as The Royal Game.</p>
+                  <a class="btn btn-primary" href="http://www.worldquant.com">Details</a>
+                </div>
+                <div class="card-body">
+                        <button id="b4" type="btn btn-primary">Add to Cart</button>
+                </div>
+            </div>
+          </div>
+          </div>
+          <br>
+          <br>
+          <div class="row">
+            <div class="col-md-3">
+                        <div class="card">
+                          <img src=".\images\gatsby.jpg" style="border-style: groove;  height:390px;box-shadow: 5px 5px 5px black" class="card-img-top" alt="">
+                           <div class="card-body">
+                             <h4 class="card-title text-uppercase"> <b>The Great Gatsby</b> </h4>
+                             <p>By: F. Scott Fitzgerald</p>
+                             <p>Price 200</p>
+                              <p class="card-text">This exemplary novel of the Jazz Age has been acclaimed by generations of readers. </p>
+                             <a class="btn btn-primary" href="#">Details</a>
+                           </div>
+                           <div class="card-body">
+                                <button id="b5" type="btn btn-primary">Add to Cart</button>
+                           </div>
+                        </div>
+            </div>
+            <div class="col-md-3">
+              <div class="card">
+                <img src=".\images\hobbit.jpg" style="border-style: groove;  height:390px;box-shadow: 5px 5px 5px black"class="card-img-top" alt="">
+                 <div class="card-body">
+                   <h4 class="card-title text-uppercase"><b>The Hobbit  There   </b></h4>
+                   <p>By: J.R.R. Tolkien</p>
+                   <p>Price 300</p>
+                    <p class="card-text"> Now recognized as a timeless classic,Written for J.R.R. Tolkien’s own children</p>
+                   <a class="btn btn-primary">Details</a>
+                 </div>
+                 <div class="card-body">
+                        <button id="b6" type="btn btn-primary">Add to Cart</button>
+                 </div>
+              </div>
+             </div>
+             <div style="background-color: rgb(3, 5, 0); height: 10"></div>
+             <div class="col-md-3">
+              <div class="card">
+                  <img src=".\images\meta.jpg "style="border-style: groove;  height:390px;box-shadow: 5px 5px 5px black" class="card-img-top" alt="">
+                  <div class="card-body">
+                    <h4 class="card-title text-uppercase"><b>The Metamorphosis</b></h4>
+                    <p>By: Franz Kafka</p>
+                    <p>Price 350</p>
+                    <p class="card-text">"As Gregor Samsa awoke one morning from uneasy dreams he found himself into.."</p>
+                    <a class="btn btn-primary" >Details</a>
+                  </div>
+                  <div class="card-body">
+                        <button id="b7" type="btn btn-primary">Add to Cart</button>
+                  </div>
+              </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card">
+                <img src=".\images\oldman.jpg"  style="border-style: groove;  height:390px;box-shadow: 5px 5px 5px black"class="card-img-top" alt="">
+                <div class="card-body">
+                  <h4 class="card-title text-uppercase"><b>The Old Man and the Sea</b></h4>
+                  <p>By:Ernest Hemingway</p>
+                  <p>Price 200</p>
+                  <p class="card-text">The last novel Ernest Hemingway saw published, The Old Man and the Sea </p>
+                  <a class="btn btn-primary" >Details</a>
+                </div>
+                <div class="card-body">
+                        <button id="b8" type="btn btn-primary">Add to Cart</button>
+                </div>
+            </div>
+          </div>
+            
+          </div>
+          <br>
+          <br>
+          <div class="row">
+                <div class="col-md-3">
+                            <div class="card">
+                              <img src=".\images\orient.jpg" style="border-style: groove;  height:390px;box-shadow: 5px 5px 5px black" class="card-img-top" alt="">
+                               <div class="card-body">
+                                 <h4 class="card-title text-uppercase"> <b>Murder on the Orient Express</b> </h4>
+                                 <p>By:Agatha Christie</p>
+                                 <p>Price 250 </p>
+                                  <p class="card-text">Le train est aussi dangereux que le paquebot » affirme Hercule Poirot…</p>
+                                 <a class="btn btn-primary" >Details</a>
+                               </div>
+                               <div class="card-body">
+                                    <button id="b9" type="btn btn-primary">Add to Cart</button>
+                               </div>
+                            </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="card">
+                    <img src=".\images\price.jpg" style="border-style: groove;  height:390px;box-shadow: 5px 5px 5px black"class="card-img-top" alt="">
+                     <div class="card-body">
+                       <h4 class="card-title text-uppercase"><b>Little Prince</b></h4>
+                       <p>By:Antoine de Saint-Exupéry</p>
+                       <p>Price 220</p>
+                        <p class="card-text">Moral allegory and spiritual autobiography, The Little Prince is the most translated book in the French language. </p>
+                       <a class="btn btn-primary" >Details</a>
+                     </div>
+                     <div class="card-body">
+                            <button id="b10"type="btn btn-primary">Add to Cart</button>
+                     </div>
+                  </div>
+                 </div>
+                 <div style="background-color: rgb(3, 5, 0); height: 10"></div>
+                 <div class="col-md-3">
+                  <div class="card">
+                      <img src=".\images\sherlock.jpg " style="border-style: groove;  height:390px;box-shadow: 5px 5px 5px black" class="card-img-top" alt="">
+                      <div class="card-body">
+                        <h4 class="card-title text-uppercase"><b>A Study in Scarlet</b></h4>
+                        <p>By:Arthur Conan Doyle</p>
+                        <p>Price 350</p>
+                        <p class="card-text">'There's a scarlet thread of murder running through the colourless skein of life..</p>
+                        <a class="btn btn-primary" >Details</a>
+                      </div>
+                      <div class="card-body">
+                            <button id="b11" type="btn btn-primary">Add to Cart</button>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-md-3">
+                <div class="card">
+                    <img src=".\images\time.jpg" style="border-style: groove;  height:390px;box-shadow: 5px 5px 5px black"class="card-img-top" alt="">
+                    <div class="card-body">
+                      <h4 class="card-title text-uppercase"><b>Time Machine</b></h4>
+                      <p>H.G Wells</p>
+                      <p>Price 450</p>
+                      <p class="card-text">".......So begins the Time Traveller’s astonishing firsthand account of his journey 800..</p>
+                      <a class="btn btn-primary" >Details</a>
+                    </div>
+                    <div class="card-body">
+                            <button id="b12"type="btn btn-primary">Add to Cart</button>
+                    </div>
+                </div>
+              </div>
+                
+              </div>
+        </div>
+        <hr>
+        <hr>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+
+<script>
+    var tcost=0;
+    var orderid=0;
+    function book(){
+        this.name=name;
+        this.price=price;
+        this.idd=idd;
+    }
+</script>
+
+
+</body>
+</html>
